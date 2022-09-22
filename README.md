@@ -38,3 +38,12 @@ let funct = 'Licht';
 createAlias(idSource,idTargetAlias,room,funct);
 createAlias('sonoff.0.dev-1.on','Test.Licht.Sonoff.An','Wohnzimmer','Licht');
 ```
+
+Neu hinzugekommen ist der Funktionsaufruf mittels Objekt als Parameter:
+```
+createAliasWithObject({
+    idSrc: "deconz.0.Lights.5.bri",
+    idDst: "test.licht.flur2.bri",
+    unit: "%"
+});
+```
