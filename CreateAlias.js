@@ -53,6 +53,13 @@ let arEnum = [];
 let arId = [];
 let timeoutAssignEnum;
 var callbackAlias = undefined;
+
+function createAliasWithObject({ idSrc, idDst, raum, gewerk, typeAlias = undefined, read = undefined, write = undefined,
+        nameAlias = undefined, role = undefined, desc = undefined, min = undefined, max = undefined,
+        unit = undefined, states = undefined }) {
+    createAlias(idSrc, idDst,raum, gewerk,typeAlias, read, write, nameAlias, role, desc, min, max, unit, states);
+}
+
 function createAlias(idSrc, idDst,raum, gewerk,typeAlias, read, write, nameAlias, role, desc, min, max, unit, states) {
   if(!idDst.includes('alias.0.'))
       idDst = 'alias.0.' + idDst;
